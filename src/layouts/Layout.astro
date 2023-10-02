@@ -1,0 +1,38 @@
+---
+import AppFooter from "../components/AppFooter.astro";
+import AppHeader from "../components/AppHeader.astro";
+import '@fontsource-variable/heebo';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/ftx.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content="Fire Control Systems Australia" />
+        <title>FIRE-TX</title>
+        
+
+        <link href="" rel="stylesheet" />
+    </head>
+    <body class="bg-white ">
+        <AppHeader />
+        <slot />
+        <AppFooter />
+    
+    </body>
+</html>
+<style>
+    html {
+        font-family: 'Heebo Variable', sans-serif;
+        
+        font-weight: 100;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+    }
+</style> 
