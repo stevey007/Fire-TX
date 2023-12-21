@@ -1,6 +1,13 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss','preline/plugin.js').Config} */
+
+
 module.exports = {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,}',
+  'node_modules/preline/dist/*.js'
+
+
+          ],
+ 
   presets: [],
  
   theme: {
@@ -18,7 +25,7 @@ module.exports = {
       primary: "#1d78bc",
       secondary: "#ff7e33",
       info: "#0C63E7",
-      blueftx:"#1D78BC",
+      blueftx:"#083e80",
       black: colors.black,
       white: colors.white,
       slate: colors.slate,
@@ -945,5 +952,7 @@ module.exports = {
     'active',
     'disabled',
   ],
-  plugins: [],
+  plugins: [
+    require('preline/plugin'),
+  ],
 }
